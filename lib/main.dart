@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class CalculatorScreen extends StatefulWidget {
+  const CalculatorScreen({super.key});
+
   @override
   _CalculatorScreenState createState() => _CalculatorScreenState();
 }
@@ -45,7 +49,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         onPressed: () => _buttonPressed(buttonText),
         child: Text(
           buttonText,
-          style: TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24),
         ),
       ),
     );
@@ -54,16 +58,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Calculator')),
+      appBar: AppBar(title: const Text('Calculator')),
       body: Column(
         children: [
           Expanded(
             child: Container(
               alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
                 _output,
-                style: TextStyle(fontSize: 48),
+                style: const TextStyle(fontSize: 48),
               ),
             ),
           ),
